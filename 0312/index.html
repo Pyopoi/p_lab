@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0312_가위바위보_만들기</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h1>가위바위보 허쉴?</h1>");
+
+      var game = prompt("가위 바위 보 중에 뭐내쉴?", "보");
+      var gameNum;
+
+      switch (game) {
+        case "가위":
+          gameNum = 1;
+          break;
+
+        case "바위":
+          gameNum = 2;
+          break;
+
+        case "보":
+          gameNum = 3;
+          break;
+
+        default:
+          alert("잘못썼어요 낑낑");
+          location.reload();
+      }
+
+      //난수만들기
+      var com = Math.ceil(Math.random() * 3);
+      //가바보 이미지
+      document.write('<img src="img/math_img_' + com + '.jpg">');
+
+      //결과이미지
+      if (gameNum == com) {
+        document.write('<img src="img/game_1.jpg">');
+      } else {
+        document.write('<img src = "img/game_2.jpg">');
+      }
+    </script>
+  </body>
+</html>
