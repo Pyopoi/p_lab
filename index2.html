@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.Array</title>
+</head>
+<body>
+    <script>
+        //저장소를 나눠서 데이터를 열거
+
+        /*
+            기본형 
+            var user_no = 1,
+                user_name = 봉봉,
+                user_age = 27,
+                user_job = "PhotoGrapher",
+                user_abbr = "대구";
+
+                var user_info = new Array (1,"봉봉",27,"PhotoGrapher","대구");
+
+                *abbr(abbreviation): 약어, 준말
+
+                */
+        var d=[1,"봉봉",27,"PhotoGrapher","대구"];
+
+        //array 전체 불러오기
+        document.write(d+"<br>");
+
+        //array 에서 두번째 값 불러오기
+        document.write(d[1]+"<br>"+"<br>");
+
+        //예제
+        var arr = [27,"내 나이", true];
+        //방법1
+        document.write("<h3>배열값가져오기-1</h3>");
+        document.write(arr[0],"<br>");
+        document.write(arr[1],"<br>");
+        document.write(arr[2],"<br>");
+        
+        //방법2
+        document.write("<h3>배열값가져오기-1</h3>");
+        for(var i = 0; i < arr.length; i++){
+            document.write(arr[i],"<br>");
+        }
+        
+        //방법3
+        document.write("<h3>배열값가져오기-3</h3>");
+        for(i in arr){
+            document.write(arr[i],"<br>");
+        }
+    </script>
+</body>
+</html>
