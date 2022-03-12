@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0312_가위바위보_만들기2</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h1>가위바위보 허쉴?</h1>");
+
+      var game = prompt("가위 바위 보 중에 뭐내쉴?", "보");
+      var gameNum;
+      var com = Math.ceil(Math.random() * 3);
+      var comCoice;
+
+      switch (game) {
+        case "가위":
+          gameNum = 1;
+          break;
+
+        case "바위":
+          gameNum = 2;
+          break;
+
+        case "보":
+          gameNum = 3;
+          break;
+
+        default:
+          alert("잘못썼어요 낑낑");
+          location.reload();
+      }
+
+      // 컴퓨터가 낸 숫자를 문자로 바꿈
+      switch(com) {
+        case 1:
+          comCoice = "가위";
+          break;
+        case 2:
+          comCoice = "바위";
+          break;
+        case 3:
+          comCoice = "보";
+          break;
+      }
+
+      //결과
+      if(gameNum == 1 && com == 3 || gameNum == 2 && com == 1 || gameNum == 3 && com == 2) {
+        document.write('<\img src="img/math_img_' + com + '.jpg\">');
+        document.write('<img src="img/game_1.jpg">');
+      } else if(gameNum == 1 && com == 2 || gameNum == 2 && com == 3 || gameNum == 3 && com == 1){
+        document.write('<\img src="img/math_img_' + com + '.jpg\">');
+        document.write('<img src="img/game_2.jpg">');
+      } else {
+        document.write('<\img src="img/math_img_' + com + '.jpg\">');
+        document.write('<img src="img/game_3.jpg">');
+      }
+    </script>
+  </body>
+</html>
